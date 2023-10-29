@@ -19,7 +19,7 @@ import { getLoginStatus } from './redux/auth/authSlice';
 import LoginPanda from './pages/auth/LoginPanda';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-//axios.defaults.withCredentials=true;
+axios.defaults.withCredentials=true;
 
 function App() {
   const dispatch=useDispatch();
