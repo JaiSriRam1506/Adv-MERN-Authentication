@@ -235,6 +235,7 @@ const authSlice = createSlice({
                 state.isError=true
                 state.message=action.payload.message
                 state.user=null
+                console.log(action.payload)
                 toast.error(action.payload)
             })
 
@@ -257,6 +258,7 @@ const authSlice = createSlice({
             state.isSuccess=false
             state.isLoggedIn=false
             state.isError=true
+            console.log(action.payload)
             if(action.payload==='New Device has detected'){
                 state.twoFactor=true
                 toast.success("New Device Detected")
@@ -286,6 +288,7 @@ const authSlice = createSlice({
             state.message=action.payload
             state.user=null
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
         //sendLoginCode
@@ -339,6 +342,7 @@ const authSlice = createSlice({
             state.message=action.payload.message
             state.user=null
             toast.error(action.payload)
+            console.log(action.payload)
         })
 
          //Logout User
@@ -362,6 +366,7 @@ const authSlice = createSlice({
             state.message=action.payload.message
             state.user=null
             toast.error(action.payload)
+            console.log(action.payload)
         })
          //Get Login Status
          .addCase(getLoginStatus.pending,(state,action)=>{
@@ -377,6 +382,7 @@ const authSlice = createSlice({
             state.isLoading=false
             state.isSuccess=false
             state.isError=true
+            console.log(action.payload)
         })
         //getUser
         .addCase(getUser.pending,(state,action)=>{
@@ -393,6 +399,7 @@ const authSlice = createSlice({
             state.isSuccess=false
             state.isError=true
             state.message=action.payload.message
+            console.log(action.payload)
         })
         //updateUser
         .addCase(updateUser.pending,(state,action)=>{
@@ -411,6 +418,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
          //sendVerificationEmail
@@ -430,6 +438,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
         //Verify User
@@ -449,6 +458,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
         //changePassword
@@ -468,6 +478,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
         //forgotPassword
@@ -487,6 +498,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
          //resetPassword
@@ -506,6 +518,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
         //getUsers
@@ -527,6 +540,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
 
         //deleteUser
@@ -546,6 +560,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
         //updateRole
         .addCase(updateRole.pending,(state,action)=>{
@@ -564,6 +579,7 @@ const authSlice = createSlice({
             state.isError=true
             state.message=action.payload.message
             toast.error(action.payload.message)
+            console.log(action.payload)
         })
   }
 });
